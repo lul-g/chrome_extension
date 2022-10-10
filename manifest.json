@@ -4,6 +4,6 @@
     "name": "Notes",
     "action": {
         "default_popup": "index.html",
-        "default_icon": "./fire.png"
+        "default_icon": "./rocket.png"
     }
 }
