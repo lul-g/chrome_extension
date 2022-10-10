@@ -6,18 +6,21 @@
 html,
 body{
   background: hsl(0, 0%, 11%);
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh; */
+  min-width: 512px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
-
+body {
+  margin: 1rem 0;
+  padding: 3rem;
+}
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50vw;
+  width: 80vw;
 }
 
 input {
@@ -26,7 +29,7 @@ input {
   border: none;
   color: white; 
   padding: 0 1rem;
-  width: 70%;
+  width: 100%;
   line-height: 40px;
   
   box-shadow: 0 0 9px 5px #008087;
@@ -36,10 +39,17 @@ input {
 input:focus{
   outline: none;
 }
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+.btns :nth-child(2) {
+  background-color: #008087;
+}
 button{
   margin-top: 1rem;
   border-radius: 5px;
-  width: 30%;
+  width: 33%;
   padding: .8rem;
   border: none;
   font-weight: 700;
@@ -55,13 +65,16 @@ button:hover {
 button:active {
   transform: scale(.98);
 }
+.btns :nth-child(2):hover {
+  background: hsl(183, 100%, 30%);
+}
 .item {
   color: black;
   background: hsl(0, 0%, 80%);
   box-shadow: 0 0 20px 10px #00eeff7e;
   border-radius: 5px;
 
-  width: 70%;
+  width: 100%;
   font-size: 16px;
   padding: .5rem 0 .5rem 2.5rem;
   margin: .5rem 0;
