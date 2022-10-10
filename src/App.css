@@ -5,7 +5,7 @@
 }
 html,
 body{
-  background: #1c1c1c;
+  background: hsl(0, 0%, 11%);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -23,11 +23,18 @@ body{
 input {
   background: transparent;
   border-radius: 5px;
-  border: 1px rgb(66, 62, 62) solid;
+  border: none;
   color: white; 
   padding: 0 1rem;
   width: 70%;
   line-height: 40px;
+  
+  box-shadow: 0 0 9px 5px #008087;
+  transition: all .2s ease;
+  text-transform: capitalize;
+}
+input:focus{
+  outline: none;
 }
 button{
   margin-top: 1rem;
@@ -36,14 +43,35 @@ button{
   padding: .8rem;
   border: none;
   font-weight: 700;
-  background: hsl(215, 28%, 17%);
+  background: #253141;
   color: white;
   transition: background-color .3s ease;
+  margin-bottom: 1rem;
 }
 button:hover {
-  background: hsl(215, 28%, 21%);
+  background: hsl(215, 28%, 25%);
   cursor: pointer;
 }
 button:active {
   transform: scale(.98);
 }
+.item {
+  color: black;
+  background: hsl(0, 0%, 80%);
+  box-shadow: 0 0 20px 10px #00eeff7e;
+  border-radius: 5px;
+
+  width: 70%;
+  font-size: 16px;
+  padding: .5rem 0 .5rem 2.5rem;
+  margin: .5rem 0;
+  position: relative;
+}
+.item::before {
+  position: absolute;
+  top: 2px;
+  left: 0rem;
+  content: url('./assets/rocket.svg');
+  transform: scale(.8);
+}
+
